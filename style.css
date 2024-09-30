@@ -1,0 +1,218 @@
+/* Root: Schriften und Farben definieren*/
+:root,
+input {
+    --background: rgb(21, 24, 26);
+    --background-header: #919192;
+    --background-body: rgb(22, 22, 22);
+    --background-box: #919192;
+    --text-main: rgb(151, 162, 163);
+    --text-link: #692930;
+    --border-header: #991625;
+    font-family: "DM Sans", sans-serif !important;
+    overflow-x: hidden;
+}
+
+header,
+footer,
+.fill {
+    width: -webkit-fill-available;
+    width: -moz-available;
+}
+
+body {
+    background-color: var(--background-body);
+    margin: 0;
+    font-size: 16px;
+}
+
+main {
+    max-width: 1760px;
+}
+
+/* Schrift-Modifikationen */
+main {
+    color: var(--text-main);
+    margin: 0px auto;
+    padding: 50px 0px;
+    position: relative;
+    left: 150px;
+}
+
+body a {
+    color: var(--text-link);
+}
+
+h1,
+h2,
+header li,
+header p {
+    font-variant: small-caps;
+    line-height: 1em;
+    margin: 0;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+/* Header der Seite bzw. Navigation */
+header,
+footer {
+    height: 50px;
+    background-color: var(--background-header);
+    border-bottom: 5px solid var(--border-header);
+    position: fixed;
+    z-index: 9999;
+}
+
+header {
+    justify-content: left;
+    gap: 780px;
+    padding-left: 280px;
+}
+
+footer {
+    border-bottom: 0;
+    border-top: 5px solid var(--border-header);
+    bottom: 0px;
+}
+
+header,
+header ul {
+    display: flex;
+    align-items: flex-end;
+}
+
+header ul {
+    list-style: none;
+    gap: 30px;
+}
+
+header h1,
+header ul,
+header li,
+header p {
+    margin-top: auto;
+    line-height: 0px;
+}
+
+/* Einzelne Schriften im Header */
+header h1 {
+    font-size: 1.8em;
+    margin-block: 0.45em;
+}
+
+header ul {
+    font-size: 1.25em;
+    margin-block: 0.5em;
+}
+
+header input {
+    margin-block: 0.05em;
+}
+
+header p {
+    font-size: 1em;
+    padding: 0;
+    margin-bottom: 0.3em;
+}
+
+header a,
+header a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+/* Inhalt der Seite */
+.flex-row {
+    display: flex;
+    flex-flow: row;
+    justify-content: left;
+    gap: 50px;
+}
+
+.flex-collumn {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    gap: 2px;
+    flex-grow: 1;
+    flex-basis: 170px;
+}
+
+.split {
+    max-width: 45%;
+}
+
+.content,
+.box {
+    padding: 20px;
+    border: 1 solid black;
+    border-radius: 15px;
+    color: black;
+    background-color: var(--background-box);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.content :first-child,
+.boxContainer,
+h1 {
+    margin: 50px 10%;
+}
+
+/* Flexboxen */
+.boxContainer {
+    width: 1070px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap-reverse;
+    gap: 20px;
+}
+
+.box {
+    min-height: 200px;
+    min-width: 200px;
+}
+
+.box h2 {
+    font-size: 2em;
+    text-align: center;
+}
+
+.box img {
+    display: block;
+    float: left;
+}
+
+.box p,
+.box ul {
+    margin: 0.5em 0;
+    padding-inline-start: 20px;
+}
+
+h1,
+h2 {
+    height: min-content;
+}
+
+.mainSection h2 {
+    display: block;
+    float: left;
+    width: 200px;
+    margin-right: 10px;
+    border-bottom: 5px solid var(--border-header);
+}
+
+li,
+p {
+    display: block;
+    position: relative;
+}
+
+footer p {
+    text-align: center;
+}

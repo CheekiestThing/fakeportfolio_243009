@@ -1,0 +1,189 @@
+/* Foto */
+#IMG {
+    width: 140px;
+    height: 140px;
+}
+
+/* Social Media-Links */
+.socialMedia {
+    display: block;
+    float: left;
+    height: 20px;
+    margin-right: 2px;
+    background-color: white;
+    padding: 1px;
+    border-radius: 3px;
+}
+
+/* Elemente in der AboutMe-Liste bewegen sich nach hinten/vorne */
+#AboutMeSection li {
+    left: 0px;
+    transition: 0.3s ease-in;
+}
+
+#AboutMeSection li:hover {
+    position: relative;
+    left: 20px;
+    transition: 0.15s ease-in;
+}
+
+/** List an fiktionalen Werken **/
+/* Erscheinungsjahr */
+#WorksSection li:first {
+    font-size: 0.8em;
+    font-variant: small-caps;
+}
+
+/* Platformen */
+#WorksSection li:nth-child(2) {
+    font-size: 1em;
+    border-bottom: 1px solid black;
+    font-variant: small-caps;
+}
+
+/* Credits */
+#WorksSection li:nth-child(3) {
+    font-size: 1.1em;
+}
+
+#WorksSection img {
+    display: block;
+    margin: 0 auto;
+    width: 140px;
+    height: 140px;
+    mix-blend-mode: darken;
+}
+
+#WorksSection .box img {
+    transform: scale(1) rotate(0);
+    opacity: 0.6;
+    transition: 0.6s ease-in;
+}
+
+#WorksSection .box:hover img {
+    transform: scale(1.1) rotate(7deg);
+    opacity: 1;
+    transition: 0.1s ease-in;
+}
+
+#Contact .box {
+    width: 100%;
+}
+
+#Contact p {
+    margin: 0;
+    padding: 0;
+}
+
+#Contact div {
+    padding-right: 30px;
+    line-height: 0.9em;
+}
+
+/* Animationen */
+@keyframes init {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes scrollLeft {
+    0% {
+        left: 100px;
+        transform: rotate(-0.5deg);
+        position: relative;
+    }
+
+    100% {
+        transform: rotate(0deg);
+        left: 0px;
+    }
+}
+
+@keyframes scrollRight {
+    0% {
+        left: -20px;
+        position: relative;
+    }
+
+    100% {
+        left: 0px;
+    }
+}
+
+#AboutMeSection {
+    animation: init 0.15s, fadeIn 0.4s, scrollLeft 0.4s ease-out;
+    animation-delay: 0s, 0.15s, 0.15s;
+    position: relative;
+}
+
+#WorksSection,
+#Contact {
+    animation: init 1.5s, fadeIn 0.7s, scrollLeft 0.7s ease-out;
+    animation-delay: 0s, 1.5s, 1.5s;
+    position: relative;
+}
+
+#IMG {
+    animation: init 0.5s, fadeIn 0.4s ease-out;
+    animation-delay: 0s, 0.5s;
+}
+
+#AboutMeSection .flex-row {
+    gap: 22px;
+}
+
+#AboutMeIntro {
+    width: 380px;
+    animation: init 1.4s, fadeIn 0.2s ease-out;
+    animation-delay: 0s, 1.4s;
+    position: relative;
+}
+
+#AboutMeSkills {
+    animation: init 0.95s, fadeIn 0.2s, scrollRight 0.2s ease-in;
+    animation-delay: 0s, 0.95s, 1s;
+    position: relative;
+}
+
+#AboutMeSkills1 {
+    animation: init 0.8s, fadeIn 0.4s, scrollLeft 0.4s ease-in;
+    animation-delay: 0s, 0.8s, 0.8s;
+}
+
+#AboutMeSkills2 {
+    animation: init 0.83s, fadeIn 0.4s, scrollLeft 0.4s ease-in;
+    animation-delay: 0s, 0.83s, 0.83s;
+}
+
+#AboutMeSkills3 {
+    animation: init 0.86s, fadeIn 0.4s, scrollLeft 0.4s ease-in;
+    animation-delay: 0s, 0.86s, 0.86s;
+}
+
+#AboutMeSkills4 {
+    animation: init 0.91s, fadeIn 0.4s, scrollLeft 0.4s ease-in;
+    animation-delay: 0s, 0.91s, 0.91s;
+}
+
+#AboutMeSkills5 {
+    animation: init 0.915s, fadeIn 0.4s, scrollLeft 0.4s ease-in;
+    animation-delay: 0s, 0.915s, 0.915s;
+}
+
+#AboutMeSkills6 {
+    animation: init 1.8s, fadeIn 0.4s, scrollLeft 0.4s ease-in;
+    animation-delay: 0s, 1.8s, 1.8s;
+}
